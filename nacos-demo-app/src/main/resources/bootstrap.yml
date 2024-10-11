@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: nacos-demo-app  # 应用名称
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:7001  # Nacos 服务器地址
+        file-extension: yaml          # 配置文件格式
+        username: nacos
+        password: nacos

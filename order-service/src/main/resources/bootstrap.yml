@@ -9,3 +9,9 @@ spring:
         server-addr: ${nacos.server-address}
         group: ${nacos.group}
         file-extension: ${nacos.file-extension}
+        username: ${nacos.username}
+        password: ${nacos.password}
+        sharedConfigs:
+          - dataId: common-service-${spring.profiles.active}.yaml
+            group: ${nacos.group}
+            refresh: true

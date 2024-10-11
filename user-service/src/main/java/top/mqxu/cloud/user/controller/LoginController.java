@@ -1,5 +1,6 @@
 package top.mqxu.cloud.user.controller;
 
+import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -26,7 +27,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class LoginController implements LoginFacade {
 
-    private final JwtProperties jwtProperties;
+    @Resource
+    private JwtProperties jwtProperties;
 
     @Override
     public ResponseData<String> login(@RequestBody LoginQuery loginQuery) {

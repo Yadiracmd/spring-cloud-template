@@ -15,7 +15,7 @@
   <name>spring-cloud-practice</name>
   <description>Spring Cloud Alibaba 微服务学习多模块项目</description>
 
-  <packaging>pom</packaging>
+    <packaging>pom</packaging>
 
 
   <properties>

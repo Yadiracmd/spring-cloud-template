@@ -19,6 +19,7 @@ import top.mqxu.cloud.common.properties.SsyProperties;
 @EnableFeignClients
 @Import({MyBatisConfig.class, FeignConfig.class })
 @EnableConfigurationProperties({SsyProperties.class, JwtProperties.class})
+
 public class UserApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);
