@@ -8,6 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import top.mqxu.cloud.common.handler.FeignConfig;
+import top.mqxu.cloud.common.handler.SentinelConfig;
 import top.mqxu.cloud.common.mybatis.MyBatisConfig;
 import top.mqxu.cloud.common.properties.SsyProperties;
 
@@ -20,7 +21,7 @@ import top.mqxu.cloud.common.properties.SsyProperties;
 @EnableFeignClients
 @EnableAspectJAutoProxy(exposeProxy = true)
 @EnableConfigurationProperties({SsyProperties.class})
-@Import({MyBatisConfig.class, FeignConfig.class})
+@Import({MyBatisConfig.class, FeignConfig.class, SentinelConfig.class})
 @MapperScan(basePackages = {"top.mqxu.cloud.product.mapper"})
 public class ProductApplication {
     public static void main(String[] args) {

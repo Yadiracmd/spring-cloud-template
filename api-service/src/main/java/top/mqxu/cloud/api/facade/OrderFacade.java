@@ -17,7 +17,7 @@ import java.util.List;
 public interface OrderFacade {
 
     @PostMapping("/order/product")
-    OrderDTO order(@RequestBody OrderCreateQuery orderCreateQuery);
+    OrderDTO order(@RequestBody OrderCreateQuery orderCreateQuery) throws Exception;
 
     @GetMapping("/orders/{uid}")
     List<OrderDTO> orders(@PathVariable("uid") Integer uid);

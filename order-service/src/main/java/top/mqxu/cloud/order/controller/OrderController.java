@@ -34,7 +34,7 @@ public class OrderController implements OrderFacade {
     private final HttpServletRequest request;
 
     @Override
-    public OrderDTO order(@RequestBody OrderCreateQuery orderCreateQuery) {
+    public OrderDTO order(@RequestBody OrderCreateQuery orderCreateQuery) throws Exception {
         String uid = request.getHeader("uid");
         String username = request.getHeader("username");
         log.info("用户 [{}, {}] 正在下单：{}", uid, username, orderCreateQuery);

@@ -29,7 +29,7 @@ public abstract class AbstractOrderService extends ServiceImpl<OrderMapper, Orde
     private OrderMapping orderMapping;
 
     @Override
-    public OrderDTO createOrder(OrderCreateQuery orderCreateQuery) {
+    public OrderDTO createOrder(OrderCreateQuery orderCreateQuery) throws Exception {
         log.info("调用商品服务查询商品信息");
         int productId = orderCreateQuery.getProductId();
         ProductDTO productDTO = queryProductInfo(productId);
@@ -52,6 +52,20 @@ public abstract class AbstractOrderService extends ServiceImpl<OrderMapper, Orde
         OrderDTO orderDTO = orderMapping.convertTo(orderDO);
         orderDTO.setSite(ssyProperties.getSite());
         orderDTO.setDesc(productDTO.getProductDesc());
+
+
+//        if (orderDTO.getId() % 3 == 0) {
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+        if(orderDTO.getId() % 2 ==0){
+            throw new RuntimeException("手动异常");
+        }
+
+
         return orderDTO;
     }
 

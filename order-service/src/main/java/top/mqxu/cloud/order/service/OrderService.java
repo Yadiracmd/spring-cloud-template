@@ -16,5 +16,5 @@ public interface OrderService extends IService<OrderDO> {
      * @param orderCreateQuery
      * @return
      */
-    OrderDTO createOrder(OrderCreateQuery orderCreateQuery);
+    OrderDTO createOrder(OrderCreateQuery orderCreateQuery) throws Exception;
 }
