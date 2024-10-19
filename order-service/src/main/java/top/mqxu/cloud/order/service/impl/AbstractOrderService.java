@@ -61,9 +61,9 @@ public abstract class AbstractOrderService extends ServiceImpl<OrderMapper, Orde
 //                throw new RuntimeException(e);
 //            }
 //        }
-        if(orderDTO.getId() % 2 ==0){
-            throw new RuntimeException("手动异常");
-        }
+//        if(orderDTO.getId() % 2 ==0){
+//            throw new RuntimeException("手动异常");
+//        }
 
 
         return orderDTO;

@@ -14,6 +14,9 @@
   <version>1.0.0</version>
   <name>spring-cloud-practice</name>
   <description>Spring Cloud Alibaba 微服务学习多模块项目</description>
+    <modules>
+        <module>gateway-service</module>
+    </modules>
 
     <packaging>pom</packaging>
 
