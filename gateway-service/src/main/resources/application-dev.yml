@@ -23,11 +23,9 @@ spring:
           predicates:  #断言（谓词）
             - Path=/order/service/**  #路由匹配的路径
             - Method=POST  #请求方法必须为POST
-            #- Between=2024-10-18T16:00:00+08:00, 2024-10-18T20:00:00+08:00 #时间后+08:00表示东八区
-            - JDK=17
+            - Between=2024-10-19T16:00:00+08:00, 2024-10-19T20:00:00+08:00 #时间后+08:00表示东八区
           filters:  #过滤器
             - StripPrefix=2   #转发路由的时候，去掉前缀2层路径/order/service
-            - InvalidParameter=token,-1
         - id: product_route # 路由的唯一标识
           order: 1 # 路由匹配顺序，数字越小优先级越高
           uri: lb://product-service #路由匹配的地址，从Nacos按照微服务的名称获取
